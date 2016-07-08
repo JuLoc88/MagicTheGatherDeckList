@@ -1,7 +1,8 @@
 # MagicTheGatherDeckList
 
-`git clone git@github.com:JuLoc88/MagicTheGatherDeckList.git`
-`cd /path/to/cloned_dir`
-`php -S localhost:3000`
+`git clone git@github.com:JuLoc88/MagicTheGatherDeckList.git`<br>
+`cd /path/to/cloned_dir`<br>
+`php -S localhost:3000`<br>
 
-<a href="localhost:3000">View in browser</a>
+
+[View in browser](http://localhost:3000/)
