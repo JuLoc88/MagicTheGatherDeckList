@@ -6,6 +6,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="app.css">
+  <script type="text/javascript" src="app.js"></script>
 </head>
 <body>
 <?php
@@ -39,78 +40,22 @@
           <div class="container">
               <div id="deck-controls" class="row">
                 <div class="col-md-6">
-                  <button>New Hand</button>
+                  <button onclick="getHand()">New Hand</button>
                   &nbsp;&nbsp;
-                  <button>Draw Card</button>
+                  <button onclick="getDraw()">Draw Card</button>
                 </div>
               </div>
-              <div class="row hand-section">
+              <div id="hand" class="row hand-section">
                 <h1 id="hand-title">Sample Hand</h1>
-                <div class="col-md-2 card">
-                1
-                </div>
-                <div class="col-md-2 card">
-                2
-                </div>
-                <div class="col-md-2 card">
-                3
-                </div>
-                <div class="col-md-2 card">
-                4
-                </div>
-                <div class="col-md-2 card">
-                5
-                </div>
-                <div class="col-md-2 card">
-                6
-                </div>
-                <div class="col-md-2 card">
-                7
-                </div>
+                <div class="col-md-2 card"></div>
               </div>
-              <div class="row hand-section">
+              <div id="draw" class="row hand-section">
                 <h1 id="hand-title">Drawn Cards</h1>
-                <div class="col-md-2 card">
-                </div>
+                <div class="col-md-2 card"></div>
               </div>
           </div>
       </div>
   </div>
 </div>
-<script>
-function loadDeckList(id) {
-  if (!Number.isInteger(parseInt(id))) {
-    document.getElementById("name-format").innerHTML = "";
-    document.getElementById("decklist").innerHTML = "";
-  } else {
-    getDeckNameAndFormat(id);
-    getDeckList(id);
-  }
-}
-
-function getDeckNameAndFormat(id){
-  var xhttp;
-  xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-      document.getElementById("name-format").innerHTML = xhttp.responseText;
-    }
-  };
-  xhttp.open("GET", "loadDeckNameAndFormat.php?id="+id, true);
-  xhttp.send();
-}
-
-function getDeckList(id){
-  var xhttp;
-  xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-      document.getElementById("decklist").innerHTML = xhttp.responseText;
-    }
-  };
-  xhttp.open("GET", "loadDeckList.php?id="+id, true);
-  xhttp.send();
-}
-</script>
 </body>
 </html>
