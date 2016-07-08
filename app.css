@@ -1,0 +1,78 @@
+#wrapper {
+  padding-left: 275px;
+  transition: all 0.4s ease 0s;
+  position: fixed;
+}
+
+#sidebar-wrapper {
+  padding: 1%;
+  margin-left: -250px;
+  left: 250px;
+  width: 275px;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
+  background: rgba(237,237,237,1);
+  background: -moz-linear-gradient(left, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(237,237,237,1)), color-stop(53%, rgba(246,246,246,1)), color-stop(100%, rgba(255,255,255,1)));
+  background: -webkit-linear-gradient(left, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
+  background: -o-linear-gradient(left, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
+  background: -ms-linear-gradient(left, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(to right, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 53%, rgba(255,255,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff', GradientType=1 );  
+}
+
+#page-content-wrapper {
+  width: 100%;
+  background: rgba(255,255,255,1);
+  background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)));
+  background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+  background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+  background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=1 );
+}
+
+#deck-controls{
+  margin: 15px 5px 25px -30px;
+}
+
+.card{
+  margin: 0 5px 10px 5px;
+  width: 125px;
+  height: 175px;
+  border: 1px solid red;
+}
+
+.hand-section {
+  border: 1px solid black;
+  padding: 10px 5px 0 15px;
+  margin-bottom: 35px;
+  width: 980px;
+}
+
+#hand-title{
+  width: 230px;
+  margin-top: -30px;
+  margin-left: 5px;
+  background: white;
+}
+
+.popup span {
+  position:fixed;
+  top:170px;
+  left:500px;
+  width:350px;
+  padding:10px;
+  border:10px solid #000;
+  border-radius:10px;
+  left:-999em;
+  z-index:990;
+}
+
+.popup:hover {visibility:visible}
+.popup:hover span {left:350px;}
+* html .popup span {position:absolute;}
