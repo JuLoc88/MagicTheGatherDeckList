@@ -9,28 +9,12 @@
   <script type="text/javascript" src="app.js"></script>
 </head>
 <body>
-<?php
-  $username   = "db_user";
-  $password   = "Ku6Hoo4MJ3";
-
-  try {
-      $pdo = new PDO('mysql:host=45.56.114.155:3306;dbname=db', $username, $password,
-        array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-  } catch (PDOException $e) {
-      print "Error!: " . $e->getMessage() . "<br/>";
-      die();
-  }  
-?>
 <h1>StarCityGames.com Web Developer Test - By: Julian Locke</h1>
 <div id="wrapper">
   <div id="sidebar-wrapper">
     <select id="deck-selector" onchange="loadDeckList(this.value)">
-      <option selected>- Select a Deck to Display -</option>
-      <?php
-        foreach ($pdo->query('SELECT deck_id, deck_name FROM decks') as $row) {
-          echo "<option value=".$row['deck_id'].">".$row['deck_name'].$row['deck_format']."</option>";
-        }
-      ?>
+      <option value="false" selected>- Select a Deck to Display -</option>
+      <?php include ('loadSelector.php') ?>
     </select>
     <section id="name-format"></section>
     <section id="decklist"></section>

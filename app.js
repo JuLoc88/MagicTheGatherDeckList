@@ -3,6 +3,10 @@ function loadDeckList(id) {
   if (!Number.isInteger(parseInt(id))) {
     document.getElementById("name-format").innerHTML = "";
     document.getElementById("decklist").innerHTML = "";
+    document.getElementById("hand").innerHTML = "<h1 id='hand-title'>Sample Hand</h1>";
+    document.getElementById("hand").innerHTML += "<div class='col-md-2 card'></div>";
+    document.getElementById("draw").innerHTML = "<h1 id='hand-title'>Drawn Cards</h1>";
+    document.getElementById("draw").innerHTML += "<div class='col-md-2 card'></div>";
   } else {
     getDeckNameAndFormat(id);
     getDeckList(id);
@@ -39,6 +43,7 @@ function getHand(){
 
   if (!Number.isInteger(parseInt($id))) {
     document.getElementById("hand").innerHTML = "<h1 id='hand-title'>Sample Hand</h1>";
+    document.getElementById("hand").innerHTML += "<div class='col-md-2 card'></div>";
     alert("Please Select A Deck");
   } else {
     var xhttp;
@@ -75,6 +80,7 @@ function getDraw(){
 
   if (!Number.isInteger(parseInt($id))) {
     document.getElementById("draw").innerHTML = "<h1 id='hand-title'>Drawn Cards</h1>";
+    document.getElementById("draw").innerHTML += "<div class='col-md-2 card'></div>";
     deck = [];
     drawn = [];
     alert("Please Select A Deck");
