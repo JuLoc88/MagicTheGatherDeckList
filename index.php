@@ -9,7 +9,7 @@
   <script type="text/javascript" src="app.js"></script>
 </head>
 <body>
-<h1>StarCityGames.com Web Developer Test - By: Julian Locke</h1>
+<h1>Magic the Gathering DeckList App - By: Julian Locke</h1>
 <div id="wrapper">
   <div id="sidebar-wrapper">
     <select id="deck-selector" onchange="loadDeckList(this.value)">
