@@ -4,8 +4,6 @@
 `cd /path/to/cloned_dir`<br>
 `php -S localhost:3000`<br>
 
-![Demo](http://gph.is/29NsuLW)
-
-<iframe src="//giphy.com/embed/OdXOnKfiFShi" width="480" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/OdXOnKfiFShi">via GIPHY</a></p>
+![](http://i.giphy.com/OdXOnKfiFShi.gif)
 
 [View in browser](http://localhost:3000/)
